@@ -29,10 +29,10 @@ export default {
 <template>
   <div class="greetings">
     <h1 class="green">{{ currentTime }}</h1>
-    <h3>Нажмите кнопку для сохранения в базе данных</h3>
-    <button @click="saveTime">Сохранить время</button>
+    <h3>Click on the button to save this in DB</h3>
+    <button @click="saveTime">Save Time</button>
     <h3 v-if="savedTimes.length && showSavedTimes">
-      Ранее сохраненные времена:
+      Saved:
     </h3>
     <div
       v-if="showSavedTimes"
@@ -42,7 +42,7 @@ export default {
     >
       <div class="deleted-item">{{ savedTime.time }}</div>
       <button class="btn-sm bg-red" @click="() => deleteTime(savedTime.id)">
-        Удалить
+        Remove
       </button>
     </div>
   </div>
