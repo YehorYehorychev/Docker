@@ -6,6 +6,9 @@ services:
     restart: always
     ports:
       - '3000:3000'
+    volumes:
+      - /app/node_modules
+      - ./frontend:/app
   api:
     build: ./api
     restart: always
@@ -14,6 +17,15 @@ services:
     depends_on:
       mysql:
         condition: service_healthy
+    volumes:
+      - /app/node_modules
+      - ./api:/app
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PORT: 3306
+      MYSQL_PASSWORD: password
+      MYSQL_DB: time_db
   mysql:
     image: mysql
     restart: always
@@ -22,8 +34,8 @@ services:
       MYSQL_DATABASE: time_db
     healthcheck:
       test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
-      timeout: 20s
-      retries: 10
+      timeout: 10s
+      retries: 5
     volumes:
       - mysql_data:/var/lib/mysql
   adminer:

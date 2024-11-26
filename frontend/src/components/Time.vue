@@ -29,8 +29,8 @@ export default {
 <template>
   <div class="greetings">
     <h1 class="green">{{ currentTime }}</h1>
-    <h3>Click on the button to save this in DB</h3>
-    <button @click="saveTime">Save Time</button>
+    <h3>Click on the button to save timestamps in DB</h3>
+    <button @click="saveTime">Save Current Timestamp</button>
     <h3 v-if="savedTimes.length && showSavedTimes">
       Saved:
     </h3>
