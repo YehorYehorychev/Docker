@@ -42,7 +42,7 @@ docker-compose up -d
     Adminer: Accessible at http://localhost:8888
 
 ### Docker Compose Configuration
-- Services:
+Services:
 
     Frontend:
         Runs on port 3000.
