@@ -33,7 +33,7 @@ cd Dockerized-Time-App
 
 ### Run the following command to start all services:
 
-docker-compose up -d
+```docker-compose up -d```
 
 ### This will initialize the following services:
 
