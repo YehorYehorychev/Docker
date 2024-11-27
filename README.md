@@ -79,7 +79,7 @@ To stop and remove all containers, run:
 ``` docker-compose down```
 
 ### Troubleshooting
-- Common Issues:
+Common Issues:
 
     Port Conflicts: If any service port is already in use, update the ports in the docker-compose.yml file.
 
