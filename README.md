@@ -81,6 +81,6 @@ To stop and remove all containers, run:
 ### Troubleshooting
 Common Issues:
 
-    Port Conflicts: If any service port is already in use, update the ports in the docker-compose.yml file.
+- Port Conflicts: If any service port is already in use, update the ports in the docker-compose.yml file.
 
-    MySQL Connection Issues: Ensure the MySQL service is healthy before the backend starts. The depends_on configuration and health checks manage this automatically.
+- MySQL Connection Issues: Ensure the MySQL service is healthy before the backend starts. The depends_on configuration and health checks manage this automatically.
